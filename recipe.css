@@ -1,0 +1,12 @@
+.results-container {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 20px 0 !important;
+  padding: 0 !important;
+}
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}

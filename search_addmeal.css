@@ -1,0 +1,111 @@
+.top-container {
+  display: flex;
+}
+
+/* Enhanced Search Section */
+.search-section {
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  flex: 1;
+  margin-right: 0;
+}
+.search-section:hover {
+  transform: scale(1.02);
+}
+.search-form {
+  display: flex;
+  gap: 10px;
+}
+.search-form input[type="text"],
+.search-form select {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+.search-form input[type="text"]:focus,
+.search-form select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+.search-form button {
+  padding: 12px 25px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.search-form button:hover {
+  background-color: #45a049;
+}
+
+.add-meal-container {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex: 1;
+  margin-left: 0;
+  gap: 25px;
+}
+.add-meal-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.add-meal-container h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.add-meal-container input[type="text"] {
+  max-width: 800px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+.add-meal-container input[type="text"]:focus {
+  border-color: #4caf50;
+  outline: none;
+  width: 300px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.add-meal-container button {
+  padding: 12px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+.add-meal-container button:hover {
+  background-color: #45a049;
+  transform: scale(1.02);
+}
+.input-button-wrapper {
+  display: flex;
+  gap: 30px;
+}
+.input-button-wrapper button {
+  transition: transform 0.3s ease;
+}
+
+.input-button-wrapper button.move {
+  transform: translateX(20px);
+}

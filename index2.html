@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Recipe Explorer & Nutrition Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="recipe.css" />
+    <link rel="stylesheet" href="search_addmeal.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h1 class="title">Enhanced Recipe Explorer & Nutrition Tracker</h1>
+    <div class="profile-container">
+      <h2>Welcome, <span id="userName">Guest</span>!</h2>
+    </div>
+    <div class="top-container">
+      <div class="search-section">
+        <div class="search-form">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for recipes..."
+          />
+          <button onclick="searchRecipes()">Search</button>
+        </div>
+      </div>
+      <div class="add-meal-container">
+        <h2>Add Your Own Meal</h2>
+        <div class="input-button-wrapper">
+          <input type="text" id="mealName" placeholder="Meal Name" />
+          <button id="addMealBtn">Add Meal</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Container -->
+    <div class="results-container">
+      <div class="loading" id="loading">Loading...</div>
+      <div class="results-grid" id="resultsGrid"></div>
+    </div>
+
+    <!-- Meals Container -->
+    <div class="meals-container">
+      <h2>Saved Meals</h2>
+      <div id="mealsList"></div>
+    </div>
+
+    <!-- Nutrition Tracker Integration -->
+    <div class="nutrition-tracker">
+      <h2>Daily Nutrition Tracker</h2>
+      <div class="columns">
+        <div class="left-column">
+          <div class="meal-section">
+            <h3>Set Daily Goals</h3>
+            <input
+              type="number"
+              id="calorieGoal"
+              placeholder="Daily Calorie Goal (kcal)"
+            />
+            <button onclick="setGoals()">Set Goals</button>
+          </div>
+          <div class="meal-section">
+            <h3>Add Meal</h3>
+            <select id="mealType">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select>
+            <input
+              type="text"
+              id="mealInput"
+              placeholder="E.g., 1 cup oatmeal, 1 banana"
+            />
+            <button onclick="fetchNutrition()">Add</button>
+            <div id="mealInfo"></div>
+          </div>
+          <div class="meal-history">
+            <h3>Meal History</h3>
+            <div id="mealHistory"></div>
+          </div>
+          <button onclick="clearData()" style="background: #dc3545">
+            Clear All Data
+          </button>
+        </div>
+        <div class="right-column">
+          <div class="progress-bar">
+            <div id="calorieProgress" class="progress"></div>
+          </div>
+          <h3 id="totalCalories">Total Calories: 0 kcal</h3>
+          <canvas id="nutritionChart"></canvas>
+          <canvas id="macronutrientChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="Recipe.js"></script>
+    <script src="user.js"></script>
+    <script src="nutrition.js"></script>
+  </body>
+</html>

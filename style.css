@@ -1,0 +1,100 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.profile-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* Other Existing Styles */
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.results-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.loading {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+.loading::after {
+  content: "Loading...";
+  font-size: 18px;
+  color: #666;
+}
+.meals-container {
+  margin-top: 20px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: 50px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+.tab-container {
+  margin-top: 20px;
+}
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.tab-button {
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tab-button.active {
+  background-color: #4caf50;
+  color: white;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
